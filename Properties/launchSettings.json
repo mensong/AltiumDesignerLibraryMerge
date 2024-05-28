@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "PCB": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\Working\\AltiumSharp-AltiumFileReader\\TestData\\PcbLib1.PcbLib\" \"D:\\Working\\AltiumSharp-AltiumFileReader\\TestData\\456.PcbLib\" \"D:\\Working\\AltiumSharp-AltiumFileReader\\TestData\\MiniPC.PcbLib\""
+    },
+    "SCH": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\Workspace\\AdLibraryWorker\\AdLibraryWorker\\bin\\Debug\\net6.0\\tmp\\e8f3a960-0e2d-4ce8-883a-09c7f73e8ab9\\Schlib1.SchLib\" \"D:\\Workspace\\AdLibraryWorker\\AdLibraryWorker\\bin\\Debug\\net6.0\\tmp\\e8f3a960-0e2d-4ce8-883a-09c7f73e8ab9\\_results\\Schlib1.SchLib\" \"D:\\Workspace\\AdLibraryWorker\\AdLibraryWorker\\bin\\Debug\\net6.0\\tmp\\e8f3a960-0e2d-4ce8-883a-09c7f73e8ab9\\assets.schlib\""
+    },
+    "Empty": {
+      "commandName": "Project"
+    }
+  }
+}
