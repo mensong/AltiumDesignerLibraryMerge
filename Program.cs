@@ -9,12 +9,12 @@ namespace AdLibraryMerge
         {
             if (args.Length < 3)
             {
-                Console.WriteLine("Usage: \"主文件\" \"输出文件\" \"子文件1\" \"子文件2\"");
+                Console.WriteLine("Usage: \"输出文件\" \"主文件\" \"子文件1\" \"子文件2\" ...");
                 return;
             }
 
-            string mainFile = args[0];
-            string outputFile = args[1];
+            string outputFile = args[0];
+            string mainFile = args[1];
             List<string> subFiles = new List<string>();
             for (int i = 2; i < args.Length; i++)
             {
@@ -26,11 +26,11 @@ namespace AdLibraryMerge
             var libType = Path.GetExtension(mainFile);
             if (libType.Equals(".schlib", StringComparison.OrdinalIgnoreCase))
             {
-                sucess = mergeSchLib(mainFile, outputFile, subFiles, out errMsg);
+                sucess = mergeSchLib(outputFile, mainFile, subFiles, out errMsg);
             }
             else if (libType.Equals(".pcblib", StringComparison.OrdinalIgnoreCase))
             {
-                sucess = mergePcbLib(mainFile, outputFile, subFiles, out errMsg);
+                sucess = mergePcbLib(outputFile, mainFile, subFiles, out errMsg);
             }
             
             if (sucess)
@@ -43,7 +43,7 @@ namespace AdLibraryMerge
             }
         }
 
-        private static bool mergeSchLib(string mainFile, string outputFile, List<string> subFiles, 
+        private static bool mergeSchLib(string outputFile, string mainFile, List<string> subFiles, 
             out string errMsg)
         {
             errMsg = "";
@@ -88,7 +88,7 @@ namespace AdLibraryMerge
             }
         }
 
-        private static bool mergePcbLib(string mainFile, string outputFile, List<string> subFiles,
+        private static bool mergePcbLib(string outputFile, string mainFile, List<string> subFiles,
             out string errMsg)
         {
             errMsg = "";
